@@ -29,7 +29,7 @@ const LoginComponent = () => {
     return (
         <div className="login-container">
             <div className='login-form'>
-            <h1>Login</h1>
+            <h1 className='ogin-header'>Login</h1>
             <input 
                 type="text" 
                 placeholder="Username" 

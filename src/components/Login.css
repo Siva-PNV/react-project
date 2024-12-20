@@ -61,7 +61,7 @@
     backdrop-filter: blur(5px);
 }
 
-h1 {
+.login-header {
     color: #010c14;
 }
 
