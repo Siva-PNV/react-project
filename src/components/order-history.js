@@ -11,22 +11,19 @@ const [ordersData, setOrdersData] = useState(null);
 
     return (
         <div>
-        <a href="/order">Order</a>
+             <nav className="navbar">
+                <div className="navbar-brand">Order History</div>
+                <ul className="navbar-nav">
+                    <li className="nav-item"><a href="/home">Home</a></li>
+                </ul>
+            </nav>
     
-        <div className="home-container">
-            <h1 className="home-title">Previous orders</h1>
-            {/* <div className="home-orders"> */}
-       
-              {/* {ordersData && ordersData.map(order => ( */}
-            
+        <div className="order-container">
+            <h1 className="order-title">Previous orders</h1>
                 
                   {ordersData?<ShowOrders ordersData={ordersData} />:'Loading...'}
-                 
-              
-              {/* ))} */}
-            {/* </div> */}
         </div>
-        <div><a href='/home'>Home</a></div>
+       
         </div>
     );
 };

@@ -1,30 +1,47 @@
 /* show-orders.css */
+
 .home-orders {
-    font-size: 1em;
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    text-align: left;
-    margin: 20px auto;
 }
 
 .order-item {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.order-item:last-child {
-    border-bottom: none;
+.order-item p {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.order-item span {
+    font-size: 16px;
+    color: #666;
 }
 
 .item {
-    margin-left: 20px;
-    padding: 5px 0;
+    margin: 10px 0;
 }
 
-.item p {
-    margin: 5px 0;
+.item-detail {
+    font-size: 14px;
+    color: #555;
+}
+
+.item-detail span {
+    margin-right: 5px;
+}
+
+#date{
+    font-size: 14px;
+    color: #666;
 }

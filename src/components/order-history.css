@@ -1,50 +1,30 @@
-/* Home.css */
-.home-container {
+/* OrderHistory.css */
+
+.order-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-    height: 100vh;
-    background-color: #f0f0f0;
     padding: 20px;
 }
 
-.home-title {
-    font-size: 2em;
+.order-title {
+    font-size: 24px;
     margin-bottom: 20px;
+    color: #333;
 }
 
-.home-welcome {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+    margin: 10px 0;
 }
 
-.home-orders {
-    font-size: 1em;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    text-align: left;
-}
-
-.order-item {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-}
-
-.order-item:last-child {
-    border-bottom: none;
-}
-
-.item {
-    margin-left: 20px;
-    padding: 5px 0;
+a:hover {
+    text-decoration: underline;
 }
 
 .loading {
-    font-size: 1.2em;
-    color: #007bff;
+    font-size: 16px;
+    color: #666;
 }

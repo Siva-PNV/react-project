@@ -1,17 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,useLocation } from 'react-router-dom';
 import './order.css'; // Import the CSS file
 import { items } from '../assets/items'; // Import the items array
+
 
 const OrderFood = () => {
     const [itemsList, setItemsList] = useState([]);
     const [order, setOrder] = useState([]);
     const [totalAmount, setTotalAmount] = useState(0);
     const navigate = useNavigate(); 
-
+    const location=useLocation();
+    const restarantDetails = location.state ? location.state.restaurantDetails : null;
+    
     useEffect(() => {
+        if(!restarantDetails){
+            navigate('/home');
+        }
         setItemsList(items);
-    }, []);
+       
+    }, [navigate, restarantDetails]);
 
     const handleAddItem = (foodItem) => {
         let price = foodItem.price;
@@ -56,11 +63,12 @@ const OrderFood = () => {
         e.preventDefault();
         console.log('Order submitted:', order);
         // Navigate to the order summary component
-        navigate('/order-summary', { state: { order, totalAmount } });
+        navigate('/order-summary', { state: { order, totalAmount,restarantDetails } });
     };
 
     return (
         <div className="order-container">
+            {restarantDetails && restarantDetails.name}
             <h1>Order Food</h1>
             <p>Order your favorite food here</p>
             <form onSubmit={handleSubmit} className="order-form">

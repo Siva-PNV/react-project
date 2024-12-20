@@ -34,8 +34,9 @@ const Register = () => {
 
     return (
         <div className="register-container">
-            <h1>Register</h1>
+           
             <form onSubmit={handleSubmit} className="register-form">
+            <h1>Register</h1>
                 <input 
                     type="text" 
                     placeholder="Username" 
@@ -64,6 +65,9 @@ const Register = () => {
                 {errors.email && <p className="register-message">{errors.email}</p>}
                 
                 <button type="submit" className="register-button">Register</button>
+                <div className='sign-up'>
+                Have an account? <a href="/">login</a>
+            </div>
             </form>
         </div>
     );

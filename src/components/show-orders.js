@@ -7,6 +7,8 @@ const ShowOrders = ({ ordersData }) => {
             <div className="home-orders">
                 {ordersData.length > 0 ? ordersData.map(order => (
                     <div key={order.id} className="order-item">
+                        <p id="date"> {order.date?'Date: '+order.date:''}</p>
+                        {order.restarantDetails ? <p> <span> {order.restarantDetails.name} ({order.restarantDetails.location})</span></p> : ''}
                         <p> <span>Price: {order.total}</span></p>
                         {order.items.map((item, index) => (
                             <div key={index} className="item" style={{ margin: '10px' }}>

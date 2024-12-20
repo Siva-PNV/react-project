@@ -19,14 +19,21 @@
       "items": [
         [
           {
-            "name": "Chicken Biryani",
-            "quantity": "2",
-            "price": 700
+            "name": "Egg Biryani",
+            "quantity": 1,
+            "price": 200
           }
         ]
       ],
       "userId": "1",
-      "total": 700
+      "total": 200,
+      "restarantDetails": {
+        "id": "1",
+        "name": "Bawarchi",
+        "location": "Kukatpally",
+        "rating": 4.5
+      },
+      "date": "12/19/2024"
     },
     {
       "id": "2",
@@ -34,146 +41,34 @@
         [
           {
             "name": "Egg Biryani",
-            "quantity": "3",
-            "price": 600
-          },
-          {
-            "name": "Mutton Biryani",
-            "quantity": "4",
-            "price": 1600
+            "quantity": 4,
+            "price": 800
           }
         ]
       ],
       "userId": "1",
-      "total": 2200
+      "total": 800,
+      "restarantDetails": {
+        "id": "2",
+        "name": "Paradise",
+        "location": "Secunderabad",
+        "rating": 4.8
+      },
+      "date": "12/19/2024"
     },
     {
       "id": "3",
       "items": [
         [
           {
-            "name": "Paneer Biryani",
-            "quantity": "10",
-            "price": 2500
+            "name": "Chicken Biryani",
+            "quantity": 2,
+            "price": 700
           },
           {
             "name": "Veg Biryani",
-            "quantity": "20",
-            "price": 3000
-          }
-        ]
-      ],
-      "userId": "1",
-      "total": 5500
-    },
-    {
-      "id": "4",
-      "items": [
-        [
-          {
-            "name": "Egg Biryani",
-            "quantity": 14,
-            "price": 2800
-          }
-        ]
-      ],
-      "userId": "1",
-      "total": 2800
-    },
-    {
-      "id": "5",
-      "items": [
-        [
-          {
-            "name": "Egg Biryani",
             "quantity": 2,
-            "price": 400
-          },
-          {
-            "name": "Chicken Biryani",
-            "quantity": 107,
-            "price": 37450
-          }
-        ]
-      ],
-      "userId": "1",
-      "total": 37850
-    },
-    {
-      "id": "6",
-      "items": [
-        [
-          {
-            "name": "Fish Biryani",
-            "quantity": 3,
-            "price": 900
-          }
-        ]
-      ],
-      "userId": "1",
-      "total": 900
-    },
-    {
-      "id": "7",
-      "items": [
-        [
-          {
-            "name": "Fish Biryani",
-            "quantity": 4,
-            "price": 1200
-          }
-        ]
-      ],
-      "userId": "1",
-      "total": 1200
-    },
-    {
-      "id": "8",
-      "items": [
-        [
-          {
-            "name": "Egg Biryani",
-            "quantity": 2,
-            "price": 400
-          },
-          {
-            "name": "Chicken Biryani",
-            "quantity": 1,
-            "price": 350
-          }
-        ]
-      ],
-      "userId": "1",
-      "total": 750
-    },
-    {
-      "id": "9",
-      "items": [
-        [
-          {
-            "name": "Egg Biryani",
-            "quantity": 2,
-            "price": 400
-          },
-          {
-            "name": "Chicken Biryani",
-            "quantity": 1,
-            "price": 350
-          },
-          {
-            "name": "Mutton Biryani",
-            "quantity": 1,
-            "price": 400
-          },
-          {
-            "name": "Veg Biryani",
-            "quantity": 1,
-            "price": 150
-          },
-          {
-            "name": "Paneer Biryani",
-            "quantity": 1,
-            "price": 250
+            "price": 300
           },
           {
             "name": "Fish Biryani",
@@ -183,7 +78,46 @@
         ]
       ],
       "userId": "1",
-      "total": 2150
+      "total": 1600,
+      "restarantDetails": {
+        "id": "3",
+        "name": "Shah Ghouse",
+        "location": "Gachibowli",
+        "rating": 4.3
+      },
+      "date": "12/19/2024"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "1",
+      "name": "Bawarchi",
+      "location": "Kukatpally",
+      "rating": 4.5
+    },
+    {
+      "id": "2",
+      "name": "Paradise",
+      "location": "Secunderabad",
+      "rating": 4.8
+    },
+    {
+      "id": "3",
+      "name": "Shah Ghouse",
+      "location": "Gachibowli",
+      "rating": 4.3
+    },
+    {
+      "id": "4",
+      "name": "Shadab",
+      "location": "Charminar",
+      "rating": 4.6
+    },
+    {
+      "id": "5",
+      "name": "Biryani Zone",
+      "location": "Madhapur",
+      "rating": 2
     }
   ]
 }

@@ -28,6 +28,7 @@ const LoginComponent = () => {
 
     return (
         <div className="login-container">
+            <div className='login-form'>
             <h1>Login</h1>
             <input 
                 type="text" 
@@ -44,14 +45,17 @@ const LoginComponent = () => {
                 className="login-input"
             />
             <button onClick={login} disabled={loading} className="login-button">
-            {loading? <span className="loading" ></span>:<span>  Click me</span>}
+             Click me
             </button>
+            {loading? <span className="loading" ></span>:''}
             <div className="login-message">
                 {flag === false && <p>Login failed</p>}
             </div>
-            <div>
+            <div className='sign-up'>
                 Don't have an account? <a href="/register">Register</a>
             </div>
+            </div>
+            <div className="bottom-design"></div>
         </div>
     );
 };

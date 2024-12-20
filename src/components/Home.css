@@ -1,50 +1,93 @@
 /* Home.css */
-.home-container {
+
+.homenavbar {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    /* justify-content: center; */
-    height: 100vh;
-    background-color: #f0f0f0;
-    padding: 20px;
+    /* background-color: #333; */
+    padding: 10px 20px;
+    color: black;
 }
 
-.home-title {
-    font-size: 2em;
-    margin-bottom: 20px;
+.homenavbar-brand {
+    display: flex;
+    align-items: center;
 }
 
-.home-welcome {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+.homenavbar-brand img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
-.home-orders {
-    font-size: 1em;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    text-align: left;
+.homenavbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-.order-item {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
-}
-
-.order-item:last-child {
-    border-bottom: none;
-}
-
-.item {
+.homenavbar-item {
     margin-left: 20px;
-    padding: 5px 0;
 }
 
-.loading {
-    font-size: 1.2em;
-    color: #007bff;
+.homenavbar-item a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.homenavbar-item a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+.restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.restaurant-item {
+    flex: 1 1 calc(20% - 20px); /* 20% width minus margin */
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    background-image: url('/chicken_biryani.jpeg'); /* Add your image path here */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Ensure text is readable on the background image */
+}
+
+.restaurant-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+}
+
+.restaurant-item h1 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: white;
+}
+
+.restaurant-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+.restaurant-item span {
+    font-size: 14px;
+    color: #999;
+}
+
+.restaurant-item img {
+    width: 50%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
 }

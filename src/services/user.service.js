@@ -1,6 +1,7 @@
 
 const API_URL = 'http://localhost:3001/users';
 const API_URL_ORDERS = 'http://localhost:3001/orders';
+const API_URL_RESTAURANTS = 'http://localhost:3001/restaurants';
 
 
 
@@ -61,7 +62,7 @@ const getOrders = async () => {
     return filtredData;
 }
 
-const saveOrder = async (items,totalAmount) => {
+const saveOrder = async (items,totalAmount,restarantDetails) => {
     const allOrders = await getOrders();
     var id;
     if(allOrders && allOrders.length>0){
@@ -70,7 +71,8 @@ const saveOrder = async (items,totalAmount) => {
     }else{
         id=String(1);
     }
-    const newOrder={items:[items],id,userId:localStorage.getItem('id'),total:totalAmount};
+    // const date=new Date().getDate;
+    const newOrder={items:[items],id,userId:localStorage.getItem('id'),total:totalAmount,restarantDetails:restarantDetails,date:new Date().toLocaleDateString()};
     const response=await fetch(API_URL_ORDERS, { method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -82,4 +84,13 @@ const saveOrder = async (items,totalAmount) => {
         return response.json();
 }
 
-export { getUsers, validateUser, addUser,getOrders ,saveOrder} ;
+const getRestaurants = async () => {
+    const response = await fetch(API_URL_RESTAURANTS);
+    if(!response){
+        throw new Error('Error fetching data');
+    }
+    const data = await response.json();
+    return data;
+}
+
+export { getUsers, validateUser, addUser,getOrders ,saveOrder,getRestaurants} ;
